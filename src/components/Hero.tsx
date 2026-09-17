@@ -160,8 +160,14 @@ export default function Hero() {
 
   return (
     <section id="top" className="relative bg-white">
-      <div className="absolute inset-0 grid-bg" />
-      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[700px] h-[380px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="absolute inset-0 hero-dots" />
+        <div className="absolute -top-32 left-1/2 -translate-x-[65%] w-[560px] h-[420px] bg-blue-600/10 blur-[110px] rounded-full" />
+        <div className="absolute -top-24 left-1/2 translate-x-[10%] w-[480px] h-[380px] bg-sky-400/15 blur-[110px] rounded-full" />
+        <div className="absolute top-10 -right-40 hidden lg:block w-[480px] h-[480px] hero-ring" />
+        <div className="absolute top-28 -right-24 hidden lg:block w-[320px] h-[320px] hero-ring" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
+      </div>
 
       <div className="relative max-w-6xl mx-auto px-5 pt-14 pb-10 md:pt-20 md:pb-14 text-center">
         <div className="inline-flex items-center gap-2 text-[12px] font-mono border border-blue-200 bg-blue-50 text-blue-700 rounded-full px-3.5 py-1.5 mb-6">
